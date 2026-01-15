@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us - Cake and Bakery</title>
+    <meta
+      name="description"
+      content="Learn about our mission, vision, and the team behind ViteModern - building the future of web development."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+      }
+      h1,
+      h2,
+      h3,
+      .font-display {
+        font-family: "Outfit", sans-serif;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-[#0f172a] text-slate-200 min-h-screen selection:bg-indigo-500/30"
+  >
+    <!-- Navbar -->
+    <nav
+      class="sticky top-0 z-50 backdrop-blur-md bg-[#0f172a]/80 border-b border-slate-800"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+          <div class="flex items-center gap-2">
+            <a href="./" class="flex items-center gap-2">
+              <img
+                src="logo.png"
+                alt="Cake and Bakery"
+                class="h-12 w-auto rounded-lg"
+              />
+            </a>
+          </div>
+          <div class="hidden md:block">
+            <div class="ml-10 flex items-baseline space-x-4">
+              <a
+                href="./"
+                class="text-slate-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                >Home</a
+              >
+              <a
+                href="about.html"
+                class="text-white bg-slate-800 px-3 py-2 rounded-md text-sm font-medium"
+                >About</a
+              >
+              <a
+                href="#"
+                class="text-slate-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                >Features</a
+              >
+              <a
+                href="#"
+                class="text-slate-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                >Pricing</a
+              >
+              <a
+                href="contact.html"
+                class="text-slate-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                >Contact</a
+              >
+              <a
+                href="#"
+                class="bg-indigo-600 hover:bg-indigo-500 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all shadow-lg shadow-indigo-500/20"
+                >Get Started</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main id="app">
+      <!-- Hero Section -->
+      <section class="relative pt-20 pb-16 overflow-hidden">
+        <div
+          class="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[1000px] bg-purple-500/10 rounded-full blur-3xl -z-10"
+        ></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div
+            x-data="{ loaded: false }"
+            x-init="setTimeout(() => loaded = true, 100)"
+            class="space-y-6"
+          >
+            <h1
+              x-show="loaded"
+              x-transition:enter="transition ease-out duration-1000"
+              x-transition:enter-start="opacity-0 translate-y-8"
+              x-transition:enter-end="opacity-100 translate-y-0"
+              class="text-5xl md:text-7xl font-display font-extrabold tracking-tight"
+            >
+              We're Building the
+              <span
+                class="bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-purple-400"
+                >Future</span
+              >
+            </h1>
+            <p
+              x-show="loaded"
+              x-transition:enter="transition ease-out duration-1000 delay-200"
+              x-transition:enter-start="opacity-0 translate-y-8"
+              x-transition:enter-end="opacity-100 translate-y-0"
+              class="max-w-3xl mx-auto text-xl text-slate-400 leading-relaxed"
+            >
+              A passionate team dedicated to creating cutting-edge web
+              development tools that empower developers worldwide to build
+              faster, smarter, and better.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Stats Section -->
+      <section class="py-16 bg-slate-900/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div
+            class="grid grid-cols-2 md:grid-cols-4 gap-8"
+            x-data="{ visible: false }"
+            x-intersect="visible = true"
+          >
+            <div
+              x-show="visible"
+              x-transition:enter="transition ease-out duration-700"
+              x-transition:enter-start="opacity-0 translate-y-8"
+              x-transition:enter-end="opacity-100 translate-y-0"
+              class="text-center"
+            >
+              <div
+                class="text-5xl font-display font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-purple-400 mb-2"
+              >
+                50K+
+              </div>
+              <div class="text-slate-400 font-medium">Active Users</div>
+            </div>
+            <div
+              x-show="visible"
+              x-transition:enter="transition ease-out duration-700 delay-100"
+              x-transition:enter-start="opacity-0 translate-y-8"
+              x-transition:enter-end="opacity-100 translate-y-0"
+              class="text-center"
+            >
+              <div
+                class="text-5xl font-display font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-400 mb-2"
+              >
+                200+
+              </div>
+              <div class="text-slate-400 font-medium">Contributors</div>
+            </div>
+            <div
+              x-show="visible"
+              x-transition:enter="transition ease-out duration-700 delay-200"
+              x-transition:enter-start="opacity-0 translate-y-8"
+              x-transition:enter-end="opacity-100 translate-y-0"
+              class="text-center"
+            >
+              <div
+                class="text-5xl font-display font-bold bg-clip-text text-transparent bg-gradient-to-r from-pink-400 to-red-400 mb-2"
+              >
+                99.9%
+              </div>
+              <div class="text-slate-400 font-medium">Uptime</div>
+            </div>
+            <div
+              x-show="visible"
+              x-transition:enter="transition ease-out duration-700 delay-300"
+              x-transition:enter-start="opacity-0 translate-y-8"
+              x-transition:enter-end="opacity-100 translate-y-0"
+              class="text-center"
+            >
+              <div
+                class="text-5xl font-display font-bold bg-clip-text text-transparent bg-gradient-to-r from-red-400 to-orange-400 mb-2"
+              >
+                24/7
+              </div>
+              <div class="text-slate-400 font-medium">Support</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Mission & Vision -->
+      <section class="py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid md:grid-cols-2 gap-12">
+            <!-- Mission -->
+            <div
+              x-data="{ visible: false }"
+              x-intersect="visible = true"
+              x-show="visible"
+              x-transition:enter="transition ease-out duration-1000"
+              x-transition:enter-start="opacity-0 -translate-x-8"
+              x-transition:enter-end="opacity-100 translate-x-0"
+              class="relative group"
+            >
+              <div
+                class="absolute -inset-1 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-3xl blur opacity-20 group-hover:opacity-30 transition duration-1000"
+              ></div>
+              <div
+                class="relative bg-slate-800 rounded-3xl p-10 border border-slate-700"
+              >
+                <div
+                  class="w-16 h-16 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-2xl flex items-center justify-center mb-6"
+                >
+                  <svg
+                    class="w-8 h-8 text-white"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M13 10V3L4 14h7v7l9-11h-7z"
+                    />
+                  </svg>
+                </div>
+                <h2 class="text-3xl font-display font-bold text-white mb-4">
+                  Our Mission
+                </h2>
+                <p class="text-slate-400 leading-relaxed text-lg">
+                  To revolutionize web development by providing developers with
+                  lightning-fast, intuitive tools that eliminate complexity and
+                  maximize productivity. We believe great tools should get out
+                  of your way and let you focus on building amazing experiences.
+                </p>
+              </div>
+            </div>
+
+            <!-- Vision -->
+            <div
+              x-data="{ visible: false }"
+              x-intersect="visible = true"
+              x-show="visible"
+              x-transition:enter="transition ease-out duration-1000 delay-200"
+              x-transition:enter-start="opacity-0 translate-x-8"
+              x-transition:enter-end="opacity-100 translate-x-0"
+              class="relative group"
+            >
+              <div
+                class="absolute -inset-1 bg-gradient-to-r from-purple-500 to-pink-600 rounded-3xl blur opacity-20 group-hover:opacity-30 transition duration-1000"
+              ></div>
+              <div
+                class="relative bg-slate-800 rounded-3xl p-10 border border-slate-700"
+              >
+                <div
+                  class="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mb-6"
+                >
+                  <svg
+                    class="w-8 h-8 text-white"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                    />
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+                    />
+                  </svg>
+                </div>
+                <h2 class="text-3xl font-display font-bold text-white mb-4">
+                  Our Vision
+                </h2>
+                <p class="text-slate-400 leading-relaxed text-lg">
+                  A world where every developer, regardless of experience level,
+                  has access to world-class tools that make building for the web
+                  a joyful experience. We're creating an ecosystem where
+                  innovation thrives and ideas come to life faster than ever.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Core Values -->
+      <section class="py-24 bg-slate-900/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-16">
+            <h2
+              class="text-4xl md:text-5xl font-display font-bold text-white mb-4"
+            >
+              Our Core Values
+            </h2>
+            <p class="text-xl text-slate-400 max-w-2xl mx-auto">
+              The principles that guide everything we do
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-3 gap-8">
+            <!-- Value 1 -->
+            <div
+              x-data="{ visible: false, hover: false }"
+              x-intersect="visible = true"
+              x-show="visible"
+              x-transition:enter="transition ease-out duration-700"
+              x-transition:enter-start="opacity-0 translate-y-8"
+              x-transition:enter-end="opacity-100 translate-y-0"
+              @mouseenter="hover = true"
+              @mouseleave="hover = false"
+              class="bg-slate-800 rounded-2xl p-8 border border-slate-700 hover:border-indigo-500/50 transition-all duration-300 cursor-pointer"
+              :class="{ 'transform -translate-y-2': hover }"
+            >
+              <div
+                class="w-14 h-14 bg-indigo-500/10 rounded-xl flex items-center justify-center mb-6"
+              >
+                <svg
+                  class="w-7 h-7 text-indigo-400"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
+                  />
+                </svg>
+              </div>
+              <h3 class="text-2xl font-display font-bold text-white mb-3">
+                Innovation First
+              </h3>
+              <p class="text-slate-400 leading-relaxed">
+                We constantly push boundaries and embrace new technologies to
+                stay ahead of the curve.
+              </p>
+            </div>
+
+            <!-- Value 2 -->
+            <div
+              x-data="{ visible: false, hover: false }"
+              x-intersect="visible = true"
+              x-show="visible"
+              x-transition:enter="transition ease-out duration-700 delay-100"
+              x-transition:enter-start="opacity-0 translate-y-8"
+              x-transition:enter-end="opacity-100 translate-y-0"
+              @mouseenter="hover = true"
+              @mouseleave="hover = false"
+              class="bg-slate-800 rounded-2xl p-8 border border-slate-700 hover:border-purple-500/50 transition-all duration-300 cursor-pointer"
+              :class="{ 'transform -translate-y-2': hover }"
+            >
+              <div
+                class="w-14 h-14 bg-purple-500/10 rounded-xl flex items-center justify-center mb-6"
+              >
+                <svg
+                  class="w-7 h-7 text-purple-400"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
+                  />
+                </svg>
+              </div>
+              <h3 class="text-2xl font-display font-bold text-white mb-3">
+                Community Driven
+              </h3>
+              <p class="text-slate-400 leading-relaxed">
+                Our community is at the heart of everything. We listen, learn,
+                and grow together.
+              </p>
+            </div>
+
+            <!-- Value 3 -->
+            <div
+              x-data="{ visible: false, hover: false }"
+              x-intersect="visible = true"
+              x-show="visible"
+              x-transition:enter="transition ease-out duration-700 delay-200"
+              x-transition:enter-start="opacity-0 translate-y-8"
+              x-transition:enter-end="opacity-100 translate-y-0"
+              @mouseenter="hover = true"
+              @mouseleave="hover = false"
+              class="bg-slate-800 rounded-2xl p-8 border border-slate-700 hover:border-pink-500/50 transition-all duration-300 cursor-pointer"
+              :class="{ 'transform -translate-y-2': hover }"
+            >
+              <div
+                class="w-14 h-14 bg-pink-500/10 rounded-xl flex items-center justify-center mb-6"
+              >
+                <svg
+                  class="w-7 h-7 text-pink-400"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"
+                  />
+                </svg>
+              </div>
+              <h3 class="text-2xl font-display font-bold text-white mb-3">
+                Excellence Always
+              </h3>
+              <p class="text-slate-400 leading-relaxed">
+                We're committed to delivering the highest quality in everything
+                we create and support.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Team Section -->
+      <section class="py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-16">
+            <h2
+              class="text-4xl md:text-5xl font-display font-bold text-white mb-4"
+            >
+              Meet the Team
+            </h2>
+            <p class="text-xl text-slate-400 max-w-2xl mx-auto">
+              The talented individuals making it all happen
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-3 gap-8">
+            <!-- Team Member 1 -->
+            <div
+              x-data="{ visible: false, hover: false }"
+              x-intersect="visible = true"
+              x-show="visible"
+              x-transition:enter="transition ease-out duration-700"
+              x-transition:enter-start="opacity-0 scale-95"
+              x-transition:enter-end="opacity-100 scale-100"
+              @mouseenter="hover = true"
+              @mouseleave="hover = false"
+              class="relative group"
+            >
+              <div
+                class="absolute -inset-1 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-2xl blur opacity-0 group-hover:opacity-20 transition duration-500"
+              ></div>
+              <div
+                class="relative bg-slate-800 rounded-2xl p-8 border border-slate-700 text-center"
+              >
+                <div
+                  class="w-24 h-24 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-full mx-auto mb-6 flex items-center justify-center text-3xl font-bold text-white"
+                >
+                  AJ
+                </div>
+                <h3 class="text-xl font-display font-bold text-white mb-1">
+                  Alex Johnson
+                </h3>
+                <p class="text-indigo-400 font-medium mb-4">Founder & CEO</p>
+                <p class="text-slate-400 text-sm leading-relaxed">
+                  Visionary leader with 15+ years in web development, passionate
+                  about creating tools that developers love.
+                </p>
+              </div>
+            </div>
+
+            <!-- Team Member 2 -->
+            <div
+              x-data="{ visible: false, hover: false }"
+              x-intersect="visible = true"
+              x-show="visible"
+              x-transition:enter="transition ease-out duration-700 delay-100"
+              x-transition:enter-start="opacity-0 scale-95"
+              x-transition:enter-end="opacity-100 scale-100"
+              @mouseenter="hover = true"
+              @mouseleave="hover = false"
+              class="relative group"
+            >
+              <div
+                class="absolute -inset-1 bg-gradient-to-r from-purple-500 to-pink-600 rounded-2xl blur opacity-0 group-hover:opacity-20 transition duration-500"
+              ></div>
+              <div
+                class="relative bg-slate-800 rounded-2xl p-8 border border-slate-700 text-center"
+              >
+                <div
+                  class="w-24 h-24 bg-gradient-to-br from-purple-500 to-pink-600 rounded-full mx-auto mb-6 flex items-center justify-center text-3xl font-bold text-white"
+                >
+                  SC
+                </div>
+                <h3 class="text-xl font-display font-bold text-white mb-1">
+                  Sarah Chen
+                </h3>
+                <p class="text-purple-400 font-medium mb-4">Lead Developer</p>
+                <p class="text-slate-400 text-sm leading-relaxed">
+                  Full-stack expert specializing in performance optimization and
+                  developer experience.
+                </p>
+              </div>
+            </div>
+
+            <!-- Team Member 3 -->
+            <div
+              x-data="{ visible: false, hover: false }"
+              x-intersect="visible = true"
+              x-show="visible"
+              x-transition:enter="transition ease-out duration-700 delay-200"
+              x-transition:enter-start="opacity-0 scale-95"
+              x-transition:enter-end="opacity-100 scale-100"
+              @mouseenter="hover = true"
+              @mouseleave="hover = false"
+              class="relative group"
+            >
+              <div
+                class="absolute -inset-1 bg-gradient-to-r from-pink-500 to-orange-600 rounded-2xl blur opacity-0 group-hover:opacity-20 transition duration-500"
+              ></div>
+              <div
+                class="relative bg-slate-800 rounded-2xl p-8 border border-slate-700 text-center"
+              >
+                <div
+                  class="w-24 h-24 bg-gradient-to-br from-pink-500 to-orange-600 rounded-full mx-auto mb-6 flex items-center justify-center text-3xl font-bold text-white"
+                >
+                  MP
+                </div>
+                <h3 class="text-xl font-display font-bold text-white mb-1">
+                  Marcus Patel
+                </h3>
+                <p class="text-pink-400 font-medium mb-4">Design Lead</p>
+                <p class="text-slate-400 text-sm leading-relaxed">
+                  Creative designer focused on crafting beautiful, intuitive
+                  interfaces that users adore.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section class="py-24 bg-slate-900/50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div
+            x-data="{ visible: false }"
+            x-intersect="visible = true"
+            x-show="visible"
+            x-transition:enter="transition ease-out duration-1000"
+            x-transition:enter-start="opacity-0 translate-y-8"
+            x-transition:enter-end="opacity-100 translate-y-0"
+            class="relative"
+          >
+            <div
+              class="absolute -inset-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-3xl blur-xl opacity-30"
+            ></div>
+            <div
+              class="relative bg-slate-800 rounded-3xl p-12 border border-slate-700"
+            >
+              <h2
+                class="text-4xl md:text-5xl font-display font-bold text-white mb-6"
+              >
+                Join Us on This Journey
+              </h2>
+              <p class="text-xl text-slate-400 mb-8 leading-relaxed">
+                Whether you're a developer, designer, or just passionate about
+                great tools, there's a place for you in our community.
+              </p>
+              <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button
+                  class="px-8 py-4 bg-white text-[#0f172a] font-bold rounded-xl hover:bg-indigo-50 transition-all transform hover:scale-105 shadow-xl"
+                >
+                  Get Started
+                </button>
+                <button
+                  class="px-8 py-4 bg-slate-700 text-white font-bold rounded-xl border border-slate-600 hover:bg-slate-600 transition-all shadow-lg"
+                >
+                  Join Community
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="py-12 border-t border-slate-800 text-center">
+      <p class="text-slate-500 text-sm">
+        &copy; 2026 Cake and Bakery. Built with love and flour.
+      </p>
+    </footer>
+
+    <script type="module" src="src/main.js"></script>
+  </body>
+</html>
